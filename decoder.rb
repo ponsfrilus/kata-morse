@@ -70,9 +70,9 @@ elsif answer == "-d"
   end.join("")
   puts output
 else
-  puts "-manual-"
-  puts "encode: -e"
-  puts "decode: -d"
-  puts "example: echo \"hello\" | ruby program.rb -e"
+  STDERR.puts "-manual-"
+  STDERR.puts "encode: -e"
+  STDERR.puts "decode: -d"
+  STDERR.puts "example: echo \"hello\" | ruby program.rb -e"
 end
 
