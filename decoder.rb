@@ -55,25 +55,24 @@ morse = {
   "$" => "...−",
 }
 
-puts "Would you like to encode or decode?"
-answer = gets.chomp.upcase
+answer = ARGV.first
 
-puts "What is your message? (Must have space betweens codes, for morse)"
-message = gets.chomp.upcase
+message = STDIN.gets.chomp.upcase
 
-if answer == "ENCODE"
-  output = ""
-  message.split("").each do |letter|
-    output += morse[letter] + " "
-  end
+if answer == "-e"
+  output = message.split("").map do |letter|
+    morse[letter] + " "
+  end.join("")
   puts output
-elsif answer == "DECODE"
-  output = ""
-  message.split(" ").each do |word|
-    output += morse.key(word)
-  end
+elsif answer == "-d"
+  output = message.split(" ").map do |word|
+    morse.key(word)
+  end.join("")
   puts output
 else
-  puts "Please enter ENCODE or DECODE"
+  puts "-manual-"
+  puts "encode: -e"
+  puts "decode: -d"
+  puts "example: echo \"hello\" | ruby program.rb -e"
 end
 
