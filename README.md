@@ -75,5 +75,7 @@ même genre, n'hésitez pas à le faire aussi !
 
 ## Je l'ai fait 💪
 
+* La version de [@jaavlex](https://github.com/jaavlex) a été faite en `ruby`
+  et est disponible [ici](https://github.com/JaavLex/kata-morse).
 * La version de [@octocat](https://github.com/octocat) a été faite en `langage`
   et est disponible [ici](https://#).
